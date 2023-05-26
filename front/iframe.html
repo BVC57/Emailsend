@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting the URL in an Iframe</title>
+  </head>
+  <body>
+    <h1>Redirecting the URL in an Iframe</h1>
+    <iframe id="my-iframe" width="560" height="400" src="https://www.example.com"></iframe>
+    <button onclick="redirect()">Redirect to a New URL</button>
+    <script>
+      function redirect() {
+        var iframe = document.getElementById('my-iframe');
+        iframe.src = 'https://www.youtube.com';
+        iframe.onload('https://www.youtube.com')
+      }
+    </script>
+  </body>
+</html>

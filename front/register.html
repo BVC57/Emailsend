@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>email send</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="register.js"></script>
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+
+      form {
+        align-items: center;
+        text-align: center;
+        height: 300px;
+        width: 500px;
+        border: 2px solid black;
+        margin-top: 50px;
+        margin-left: 400px;
+        border-radius: 20px;
+        box-shadow: 5px 7px rgb(124, 105, 105),
+                     10px 5px rgb(124, 112, 112) ;
+      }
+      form input{
+        padding: 20px;
+        width: 300px;
+        margin-top: 100px;
+        background-color: darkgrey;
+        border-radius: 15px;
+        /* border: none;
+        border-bottom: 2px solid black; */
+      }
+      button{
+        height: 50px;
+        width: 150px;
+        margin-top: 30px;
+        background-color: green;
+        border-radius: 10px;
+      }
+
+      form input::placeholder{
+        letter-spacing: 15px;
+        font-size: 20px;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body ng-app="myApp" ng-controller="GreetingController">
+    <div>
+      <form>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="username"
+          ng-model="username" /><br />
+        <!-- <input type="text" id="sc" placeholder="6-digit code" ng-model="sc"/><br/> -->
+        <button ng-click="sendmessage()">Send Code</button>
+      </form>
+    </div>
+  </body>
+</html>
